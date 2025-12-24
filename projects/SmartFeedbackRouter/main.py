@@ -32,7 +32,7 @@ neutral_prompt = PromptTemplate(
 )
 
 negative_prompt = PromptTemplate(
-    template="The user is unhappy. Apologize and provide a solution.\nText: {text}",
+    template="The user is unhappy. Provide a solution.\nText: {text}",
     input_variables=["text"],
 )
 
