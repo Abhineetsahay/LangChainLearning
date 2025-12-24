@@ -14,11 +14,11 @@ parser = StrOutputParser()
 
 sentiment_prompt = PromptTemplate(
     template="""
-Classify the sentiment of the following text as
-Positive, Neutral, or Negative.
-
-Text: {text}
-""",
+    Classify the sentiment of the following text as
+    Positive, Neutral, or Negative.
+    
+    Text: {text}
+    """,
     input_variables=["text"],
 )
 
@@ -40,8 +40,6 @@ parallel_chain = RunnableParallel(
     }
 )
 
-result = parallel_chain.invoke(
-    {"text": "I am very happy as I got placed"}
-)
+result = parallel_chain.invoke({"text": "I am very happy as I got placed"})
 
 print(result)
